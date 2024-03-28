@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Button from '../Components/Button';
+import './Login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -34,33 +36,40 @@ function Login() {
     return (
       <div>
         <h1>Welcome {email}</h1>
-        {/* Your dashboard component goes here */}
       </div>
     );
   }
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="email" 
-          placeholder="Email" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-          required 
-        />
-        <input 
-          type="password" 
-          placeholder="Password" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)} 
-          required 
-        />
-        <button type="submit">Login</button>
-        {error && <p>{error}</p>}
-      </form>
-    </div>
+    <div className='login-container'>
+      <div className='login-wraper'>
+        <h1 className='header'>Login</h1>
+        <form className='login-form'>
+          {error && <p className='loginform-error'>{error}</p>}
+          <input 
+            type="email" 
+            placeholder="Email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            required 
+          />
+          <input 
+            type="password" 
+            placeholder="Password" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            required 
+          />
+          <Button
+            text='Login'
+            className='DiPraxias-btn-secondary'
+            isDisabled={false}
+            isLoading={false}
+            onClick={handleSubmit}
+          />
+        </form>
+      </div>
+    </div>    
   );
 }
 

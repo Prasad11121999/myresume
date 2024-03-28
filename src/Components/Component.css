@@ -1,0 +1,28 @@
+/*----------------------------------------------------Button Css*/
+.DiPraxias-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 8px 40px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+}
+.DiPraxias-btn:hover{
+    background-color: #8080808c;
+    color: white;
+}
+
+/*btn-style*/
+.DiPraxias-btn-primary{
+    
+}
+.DiPraxias-btn-secondary{
+    
+}
+.DiPraxias-btn-primary:hover{
+    
+}
+.DiPraxias-btn-secondary:hover{
+    
+}
+
