@@ -5,7 +5,9 @@ import Login from './Pages/Login';
 function App() {
   return (
     <>
-      <Login/>
+      <main className='.main'>
+        <Login/>
+      </main>
     </>
   );
 }
